@@ -56,15 +56,47 @@
 		83DF5AC228ECC7B600C07E39 /* CardsForFriends */ = {
 			isa = PBXGroup;
 			children = (
-				83DF5AC328ECC7B600C07E39 /* AppDelegate.swift */,
-				83DF5AC528ECC7B600C07E39 /* SceneDelegate.swift */,
-				83DF5AC728ECC7B600C07E39 /* ViewController.swift */,
-				83DF5AC928ECC7B600C07E39 /* Main.storyboard */,
+				83DF5AD928ECC8B200C07E39 /* ViewControllers */,
+				83DF5ADA28ECC93000C07E39 /* Models */,
+				83DF5AD728ECC89B00C07E39 /* Config */,
+				83DF5AD828ECC8AF00C07E39 /* Storyboards */,
 				83DF5ACC28ECC7B700C07E39 /* Assets.xcassets */,
-				83DF5ACE28ECC7B700C07E39 /* LaunchScreen.storyboard */,
-				83DF5AD128ECC7B700C07E39 /* Info.plist */,
 			);
 			path = CardsForFriends;
+			sourceTree = "<group>";
+		};
+		83DF5AD728ECC89B00C07E39 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				83DF5AC328ECC7B600C07E39 /* AppDelegate.swift */,
+				83DF5AC528ECC7B600C07E39 /* SceneDelegate.swift */,
+				83DF5AD128ECC7B700C07E39 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		83DF5AD828ECC8AF00C07E39 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				83DF5AC928ECC7B600C07E39 /* Main.storyboard */,
+				83DF5ACE28ECC7B700C07E39 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		83DF5AD928ECC8B200C07E39 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				83DF5AC728ECC7B600C07E39 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		83DF5ADA28ECC93000C07E39 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,22 +321,26 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J572FQ3494;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CardsForFriends/Info.plist;
+				INFOPLIST_FILE = CardsForFriends/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AndreySandler.CardsForFriends;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,22 +353,26 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J572FQ3494;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CardsForFriends/Info.plist;
+				INFOPLIST_FILE = CardsForFriends/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AndreySandler.CardsForFriends;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
