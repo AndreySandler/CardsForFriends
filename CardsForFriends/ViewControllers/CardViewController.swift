@@ -18,23 +18,18 @@ class CardViewController: UIViewController {
     @IBOutlet var foodLabel: UILabel!
     
     // MARK: - Public Properties
-    var name: String!
-    var surname: String!
-    var age: String!
-    var habitate: String!
-    var hobby: String!
-    var food: String!
+    var card: Card!
     
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         addGradient()
-        
-        nameLabel.text = name
-        surnameLabel.text = surname
-        ageLabel.text = age
-        habitateLabel.text = habitate
-        hobbyLabel.text = hobby
-        foodLabel.text = food
+
+        nameLabel.text = card.name
+        surnameLabel.text = card.surname
+        ageLabel.text = String(card.yearsOld)
+        habitateLabel.text = card.habitat
+        hobbyLabel.text = card.hobby
+        foodLabel.text = card.favoriteFood
     }
 }

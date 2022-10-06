@@ -32,12 +32,7 @@ class LoginViewController: UIViewController {
             } else if let navigationVC = viewController as? UINavigationController {
                 guard let cardVC = navigationVC.topViewController as? CardViewController else { return }
                 
-                cardVC.name = user.card.name
-                cardVC.surname = user.card.surname
-                cardVC.age = String(user.card.yearsOld)
-                cardVC.habitate = user.card.habitat
-                cardVC.hobby = user.card.hobby
-                cardVC.food = user.card.favoriteFood
+                cardVC.card = .getCard()
             }
         }
     }

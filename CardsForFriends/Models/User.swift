@@ -14,15 +14,7 @@ struct User {
         User(
             username: "Andrey",
             password: "Andrey",
-            card: Card(
-                name: "Андрей",
-                surname: "Сандлер",
-                yearsOld: 20,
-                habitat: "Воронеж",
-                hobby: "Домашние тренировки",
-                favoriteFood: "Бун Ча Тхит Ныонг",
-                description: "Это карточка Андрея."
-            )
+            card: .getCard()
         )
     }
 }
@@ -35,4 +27,16 @@ struct Card {
     let hobby: String
     let favoriteFood: String
     let description: String
+    
+    static func getCard() -> Card {
+        Card(
+            name: "Андрей",
+            surname: "Сандлер",
+            yearsOld: 20,
+            habitat: "Воронеж",
+            hobby: "Домашние тренировки",
+            favoriteFood: "Бун Ча Тхит Ныонг",
+            description: "Это карточка Андрея."
+        )
+    }
 }
