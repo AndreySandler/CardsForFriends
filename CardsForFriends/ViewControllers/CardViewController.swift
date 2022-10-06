@@ -17,6 +17,8 @@ class CardViewController: UIViewController {
     @IBOutlet var hobbyLabel: UILabel!
     @IBOutlet var foodLabel: UILabel!
     
+    @IBOutlet var userProfileImage: UIImageView!
+    
     // MARK: - Public Properties
     var card: Card!
     
@@ -24,12 +26,15 @@ class CardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addGradient()
-
+        navigationItem.backBarButtonItem?.tintColor = .white
+        userProfileImage.layer.cornerRadius = 50
+        
         nameLabel.text = card.name
         surnameLabel.text = card.surname
         ageLabel.text = String(card.yearsOld)
         habitateLabel.text = card.habitat
         hobbyLabel.text = card.hobby
         foodLabel.text = card.favoriteFood
+        userProfileImage.image = UIImage(named: card.image)
     }
 }

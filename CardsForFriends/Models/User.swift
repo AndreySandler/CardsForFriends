@@ -27,6 +27,7 @@ struct Card {
     let hobby: String
     let favoriteFood: String
     let description: String
+    let image: String
     
     static func getCard() -> Card {
         Card(
@@ -36,7 +37,8 @@ struct Card {
             habitat: "Воронеж",
             hobby: "Домашние тренировки",
             favoriteFood: "Бун Ча Тхит Ныонг",
-            description: "Это карточка Андрея."
+            description: "Это карточка Андрея.",
+            image: "Andrey-Photo"
         )
     }
 }
