@@ -8,12 +8,12 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     // MARK: - IB Outlets
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    // MARK: - Private Properties
+    // MARK: - Public Properties
     let user = User.getUser()
     
     // MARK: - Override Methods
@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarVC.viewControllers else { return }
-        
+
         viewControllers.forEach { viewController in
             if let homeVC = viewController as? HomeViewController {
                 homeVC.greeting = user.username
@@ -45,8 +45,8 @@ class LoginViewController: UIViewController {
     // MARK: - IB Actions
     @IBAction func forgotButton(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Oops", message: "Your username is User")
-        : showAlert(title: "Oops", message: "Your password is Password")
+        ? showAlert(title: "Oops", message: "Your username is \(user.username)")
+        : showAlert(title: "Oops", message: "Your password is \(user.password)")
     }
     
     @IBAction func loginButtonDidTapped() {
@@ -58,6 +58,11 @@ class LoginViewController: UIViewController {
             )
             return
         }
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        usernameTextField.text = ""
+        passwordTextField.text = ""
     }
 }
 
