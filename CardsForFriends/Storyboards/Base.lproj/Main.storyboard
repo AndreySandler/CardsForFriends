@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="oIp-sg-mI1">
-                                <rect key="frame" x="30" y="119.5" width="260" height="229.5"/>
+                                <rect key="frame" x="30" y="129.5" width="260" height="209"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Izv-75-wYC">
                                         <rect key="frame" x="0.0" y="0.0" width="260" height="83"/>
@@ -40,27 +40,34 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Log In"/>
                                         <connections>
+                                            <action selector="loginButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="X8a-hT-gl3"/>
                                             <segue destination="OfE-S0-szr" kind="presentation" modalPresentationStyle="fullScreen" id="zSr-AU-VJ2"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="fKy-Me-qKS">
-                                        <rect key="frame" x="0.0" y="181.5" width="260" height="48"/>
+                                        <rect key="frame" x="0.0" y="181.5" width="260" height="27.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWh-P2-6lf">
-                                                <rect key="frame" x="0.0" y="0.0" width="115" height="48"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="27.5"/>
                                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Forgot username">
-                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleCaption2"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="forgotButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XUw-Fb-xfc"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cy3-aC-4dK">
-                                                <rect key="frame" x="145" y="0.0" width="115" height="48"/>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cy3-aC-4dK">
+                                                <rect key="frame" x="145" y="0.0" width="115" height="27.5"/>
                                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Forgot password">
-                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleCaption2"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="forgotButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bVk-ar-QXk"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -75,15 +82,19 @@
                             <constraint firstItem="oIp-sg-mI1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="xq6-NB-vbl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="zar-0S-2G8" id="uXc-Pd-TM7"/>
+                        <outlet property="usernameTextField" destination="Q8N-c8-ejg" id="RUW-v8-h07"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="48" y="-2"/>
         </scene>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="kWi-My-9Ua">
             <objects>
-                <viewController id="YrX-LL-oTC" customClass="HomeViewController" customModule="CardsForFriends" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home View Controller" id="YrX-LL-oTC" customClass="HomeViewController" customModule="CardsForFriends" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8kg-qg-ucK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,7 +105,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Label!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjJ-Az-rCC">
                                         <rect key="frame" x="54.5" y="0.0" width="179.5" height="31.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🖖" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aor-xf-Zul">
@@ -125,15 +136,18 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="Mzr-Ei-mfq"/>
+                    <connections>
+                        <outlet property="greetingLabel" destination="SjJ-Az-rCC" id="1nz-y3-IJa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i49-If-HPq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1970.625" y="-683.45070422535207"/>
         </scene>
-        <!--Your card is-->
+        <!--Card View Controller-->
         <scene sceneID="y5D-Yz-3Iq">
             <objects>
-                <viewController id="FXq-UW-P36" customClass="CardViewController" customModule="CardsForFriends" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Card View Controller" id="FXq-UW-P36" customClass="CardViewController" customModule="CardsForFriends" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pgW-93-Nos">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -153,10 +167,10 @@
             </objects>
             <point key="canvasLocation" x="2968.125" y="-2.112676056338028"/>
         </scene>
-        <!--View Controller-->
+        <!--Description View Controller-->
         <scene sceneID="ad2-dM-Ye8">
             <objects>
-                <viewController id="VXV-Nq-Uxu" sceneMemberID="viewController">
+                <viewController title="Description View Controller" id="VXV-Nq-Uxu" customClass="DescriptionViewController" customModule="CardsForFriends" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kOb-xd-tor">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,14 +201,14 @@
             </objects>
             <point key="canvasLocation" x="917" y="-2"/>
         </scene>
-        <!--Card-->
+        <!--Navigation Controller-->
         <scene sceneID="SiV-8K-zIn">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QFn-Xa-p27" sceneMemberID="viewController">
+                <navigationController title="Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="QFn-Xa-p27" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Card" image="greetingcard" catalog="system" id="6v5-fa-hwI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="AjR-Jr-MjQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
