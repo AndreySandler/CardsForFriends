@@ -14,7 +14,7 @@ struct User {
         User(
             username: "Andrey",
             password: "Andrey",
-            card: .getCard()
+            card: Card.getCard()
         )
     }
 }

@@ -13,13 +13,13 @@ class DescriptionViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
     
     // MARK: - Public Properties
-    var descriptionCard: String!
+    var descriptionCard: Card!
     
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addGradient()
-        descriptionLabel.text = descriptionCard
+        descriptionLabel.text = descriptionCard.description
     }
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 class CardViewController: UIViewController {
-
+    
     // MARK: - IB Outlets
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var surnameLabel: UILabel!
@@ -17,7 +17,11 @@ class CardViewController: UIViewController {
     @IBOutlet var hobbyLabel: UILabel!
     @IBOutlet var foodLabel: UILabel!
     
-    @IBOutlet var userProfileImage: UIImageView!
+    @IBOutlet var userProfileImage: UIImageView! {
+        didSet {
+            userProfileImage.layer.cornerRadius = userProfileImage.frame.height / 2
+        }
+    }
     
     // MARK: - Public Properties
     var card: Card!
@@ -37,4 +41,11 @@ class CardViewController: UIViewController {
         foodLabel.text = card.favoriteFood
         userProfileImage.image = UIImage(named: card.image)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let descriptionVC = segue.destination as? DescriptionViewController else { return }
+        
+        descriptionVC.descriptionCard = .getCard()
+    }
 }
+

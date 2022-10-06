@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarVC.viewControllers else { return }
-
+        
         viewControllers.forEach { viewController in
             if let homeVC = viewController as? HomeViewController {
                 homeVC.greeting = user.username
@@ -45,7 +45,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonDidTapped() {
-        guard usernameTextField.text == user.username, passwordTextField.text == user.password else {
+        guard usernameTextField.text == user.username,
+              passwordTextField.text == user.password else {
             showAlert(
                 title: "Oops",
                 message: "Wrong username or password",
